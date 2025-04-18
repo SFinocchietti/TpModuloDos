@@ -1,0 +1,169 @@
+/* Layout general de la lista */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tarjeta individual */
+.product-card {
+    background-color: #fff;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Efecto hover */
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen */
+.product-card img {
+    max-width: 100%;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+}
+
+/* Título */
+.product-card h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+/* Precios y descuento */
+.product-card .precio-real {
+    text-decoration: line-through;
+    color: #888;
+    margin-bottom: 0.3rem;
+}
+
+.product-card .precio-final {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #2e7d32;
+}
+
+.product-card .descuento {
+    background-color: #e53935;
+    color: white;
+    padding: 0.25rem 0.5rem;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+
+/* Botones generales */
+button {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Botón habilitado */
+button:enabled {
+    background-color: #4caf50; /* Verde */
+    color: white;
+}
+
+button:enabled:hover {
+    background-color: #45a049; /* Verde más oscuro */
+    transform: translateY(-2px);
+}
+
+/* Botón deshabilitado */
+button:disabled {
+    background-color: #ccc; /* Gris */
+    color: #666;
+    cursor: not-allowed;
+}
+
+/* Botón Reset específico */
+button.reset {
+    background-color: #ccc; /* Gris cuando está deshabilitado */
+    color: #666;
+    cursor: not-allowed;
+}
+
+button.reset:enabled {
+    background-color: #4caf50; /* Verde cuando está habilitado */
+    color: white;
+    cursor: pointer;
+}
+
+button.reset:enabled:hover {
+    background-color: #45a049; /* Verde más oscuro al hacer hover */
+}
+
+/* Botón Detalle */
+button.detalle {
+    background-color: #1307f0; /* Azul */
+}
+
+button.detalle:hover {
+    background-color: #5a8dfd; /* Azul más clarito al hacer hover */
+}
+
+/* Contenedor del login */
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh; /* Cambiado de height a min-height */
+    background-color: #f5f5f5;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    max-width: 400px;
+    margin: auto; /* Centrado horizontal y vertical */
+    box-sizing: border-box; /* Asegura que padding no afecte el tamaño */
+}
+
+/* Título del login */
+.login-container h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+/* Inputs del formulario */
+.login-container input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+/* Botón de login */
+.login-container button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.login-container button:hover {
+    background-color: #45a049;
+    transform: translateY(-2px);
+}

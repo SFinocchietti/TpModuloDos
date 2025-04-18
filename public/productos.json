@@ -1,0 +1,58 @@
+[
+    {
+        "idProducto": 1,
+        "titulo": "Smart tv 21 pulgadas",
+        "precio_real": 619.999,
+        "precio_final": 499.999,
+        "descuento": 30,
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_798546-MLA83153981339_032025-F.webp",
+        "descripcion": "Smart tv 21 pulgadas con resolución Full HD y tecnología LED. Ideal para ver tus series y películas favoritas."
+        
+    },
+    {
+        "idProducto": 2,
+        "titulo": "Smart tv 40 pulgadas",
+        "precio_real": 619.999,
+        "precio_final": 699.999,
+        "descuento": 30,
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_826938-MLU74117403532_012024-F.webp",
+        "descripcion": "Smart tv 40 pulgadas con resolución Full HD y tecnología LED. Ideal para ver tus series y películas favoritas."
+    },
+    {
+        "idProducto": 3,
+        "titulo": "Smart tv 50 pulgadas",
+        "precio_real": 719.999,
+        "precio_final": 799.999,
+        "descuento": 30,
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_923175-MLA82158744312_022025-F.webp",
+        "descripcion": "Smart tv 50 pulgadas con resolución Full HD y tecnología LED. Ideal para ver tus series y películas favoritas."
+    },
+    {
+        "idProducto": 4,
+        "titulo": "Monitor 40 pulgadas",
+        "precio_real": 919.999,
+        "precio_final": 799.999,
+        "descuento": 30,
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_701367-MLU78353932736_082024-F.webp",
+        "descripcion": "Monitor 40 pulgadas con resolución Full HD y tecnología LED. Ideal para trabajar o jugar."
+    },
+    {
+        "idProducto": 5,
+        "titulo": "Monitor 35 pulgadas",
+        "precio_real": 450.000,
+        "precio_final": 300.999,
+        "descuento": 30,
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_644840-MLA81853370716_012025-F.webp",
+        "descripcion": "Monitor 35 pulgadas con resolución Full HD y tecnología LED. Ideal para trabajar o jugar."
+    },
+    {
+        "idProducto": 6,
+        "titulo": "Monitor 22 pulgadas",
+        "precio_real": 300.000,
+        "precio_final": 250.999,
+        "descuento": 30,
+        "imagen": "https://http2.mlstatic.com/D_NQ_NP_2X_774360-MLC50746388594_072022-F.webp",
+        "descripcion": "Monitor 22 pulgadas con resolución Full HD y tecnología LED. Ideal para trabajar o jugar."
+    }
+
+]
