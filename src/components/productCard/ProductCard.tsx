@@ -1,7 +1,10 @@
-import { useState } from "react";
+//import { useState } from "react";
 import BotonComprar from "../BotonComprar/BotonComprar";
-import Especificaciones from "../Especificaciones/Especificaciones";
+//import Especificaciones from "../Especificaciones/Especificaciones";
+import { useNavigate } from "react-router-dom";
+
 interface ProductCardProps {
+    idProducto: number;
     title: string;
     precio_real: number;
     precio_final: number;
@@ -11,16 +14,16 @@ interface ProductCardProps {
 
 }
 
-const ProductCard = ({ title, precio_real, precio_final, descuento, imagen, descripcion }: ProductCardProps) => {
-    const [mostrarDescripcion, setMostrarDescripcion] = useState(false);
-
+const ProductCard = ({ idProducto, title, precio_real, precio_final, descuento, imagen }: ProductCardProps) => {
+    //const [, setMostrarDescripcion] = useState(false);
+    const navigate = useNavigate();
     const verDetalle = () => {
-        setMostrarDescripcion(true);
+        navigate(`/productos/${idProducto}`);
     };
 
-    const volver = () => {
-        setMostrarDescripcion(false);
-    };
+    // const volver = () => {
+    //     setMostrarDescripcion(false);
+    // };
     return (
         <div className="product-card">
             <img src={imagen} alt={title} />
@@ -33,14 +36,9 @@ const ProductCard = ({ title, precio_real, precio_final, descuento, imagen, desc
             </div>
 
             <div style={{ marginTop: "1rem" }}>
-                {!mostrarDescripcion ? (
-                    <button
-                    className="detalle" 
-                    onClick={verDetalle}>Ver Detalle</button>
-                ) : (
-                    <Especificaciones descripcion={descripcion} onVolver={volver} />
-                )}
+                <button className="detalle" onClick={verDetalle}>Ver Detalle</button>
             </div>
+
         </div>
 
     );

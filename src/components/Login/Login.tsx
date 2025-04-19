@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import usuario from '../../../public/usurios.json'
+import { useNavigate } from "react-router-dom"
 
 interface LoginProps {
     setLogueado: (valor: boolean) => void;
@@ -9,10 +10,14 @@ interface LoginProps {
 const Login = ({ setLogueado }: LoginProps) => {
     const [nombreUsuario, setNombreUsuario] = useState('');
     const [contraseña, setContraseña] = useState('');
+    const navigate = useNavigate()
 
-    const manejarClick = () => {
+
+    const handleLogin = () => {
         if (nombreUsuario === usuario.usuario && contraseña === usuario.contraseña) {
             setLogueado(true);
+            navigate("/productos");
+            
         } else {
             alert('Usuario o contraseña incorrectos');
         }
@@ -35,7 +40,7 @@ const Login = ({ setLogueado }: LoginProps) => {
                 onChange={(e) => setContraseña(e.target.value)}
             />
             <br />
-            <button onClick={manejarClick}>Ingresar</button>
+            <button onClick={handleLogin}>Ingresar</button>
         </div>
     );
 };

@@ -8,6 +8,7 @@ const ProductList = () => {
             {productos.map((producto) => (
                 <ProductCard
                     key={producto.idProducto}
+                    idProducto={producto.idProducto}
                     title={producto.titulo}
                     precio_real={producto.precio_real}
                     precio_final={producto.precio_final}
