@@ -1,4 +1,12 @@
-/* Layout general de la lista */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+
 .product-list {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -74,46 +82,46 @@ button {
 
 /* Botón habilitado */
 button:enabled {
-    background-color: #4caf50; /* Verde */
+    background-color: #4caf50; 
     color: white;
 }
 
 button:enabled:hover {
-    background-color: #45a049; /* Verde más oscuro */
+    background-color: #45a049; 
     transform: translateY(-2px);
 }
 
 /* Botón deshabilitado */
 button:disabled {
-    background-color: #ccc; /* Gris */
+    background-color: #ccc; 
     color: #666;
     cursor: not-allowed;
 }
 
 /* Botón Reset específico */
 button.reset {
-    background-color: #ccc; /* Gris cuando está deshabilitado */
+    background-color: #ccc;
     color: #666;
     cursor: not-allowed;
 }
 
 button.reset:enabled {
-    background-color: #4caf50; /* Verde cuando está habilitado */
+    background-color: #4caf50; 
     color: white;
     cursor: pointer;
 }
 
 button.reset:enabled:hover {
-    background-color: #45a049; /* Verde más oscuro al hacer hover */
+    background-color: #45a049; 
 }
 
 /* Botón Detalle */
 button.detalle {
-    background-color: #1307f0; /* Azul */
+    background-color: #1307f0; 
 }
 
 button.detalle:hover {
-    background-color: #5a8dfd; /* Azul más clarito al hacer hover */
+    background-color: #5a8dfd;
 }
 
 /* Contenedor del login */
@@ -123,14 +131,14 @@ button.detalle:hover {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: 80vh; /* Cambiado de height a min-height */
+    min-height: 80vh; 
     background-color: #f5f5f5;
     padding: 2rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 12px;
     max-width: 400px;
-    margin: auto; /* Centrado horizontal y vertical */
-    box-sizing: border-box; /* Asegura que padding no afecte el tamaño */
+    margin: auto; 
+    box-sizing: border-box; 
 }
 
 /* Título del login */
@@ -167,3 +175,97 @@ button.detalle:hover {
     background-color: #45a049;
     transform: translateY(-2px);
 }
+
+
+
+/* ************************************************************************************** */
+/* *********************************** Hoja de Registro ******************************** */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #2e7d32;
+    color: white;
+    width: 100%;
+    max-width: 100%;
+    
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+
+.header-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 0;
+    flex: 1;
+    text-align: left;
+}
+
+.header-buttons {
+    display: flex;
+    gap: 1rem;
+
+}
+
+
+/* Botones del header */
+.header .btn {
+    font-size: 1rem;
+    padding: 0.5rem 1.5rem; 
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 200px;
+    text-align: center; 
+}
+
+.header .btn-login {
+    background-color: #0d0dea;
+    color: white;
+}
+
+.header .btn-login:hover {
+    background-color: #3f75ec; 
+    transform: none; 
+}
+
+.header .btn-register {
+    background-color: #ea2929; 
+    color: white;
+}
+
+.header .btn-register:hover {
+    background-color: #b73f55; 
+    transform: none; 
+}
+
+
+/* ************************************************************************************** */
+/* *********************************** Boton de regitro ******************************** */
+
+button.btn-registrarse {
+    background-color: #fa0606; 
+}
+
+button.btn-registrarse:hover {
+    background-color: #e45555; 
+}
+
+
+button.btn-volver {
+    background-color: #063ffa; 
+}
+
+button.btn-volver:hover {
+    background-color: #7f7ff7; 
+}
+
+/* ************************************************************************************** */

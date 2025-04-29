@@ -17,11 +17,18 @@ const Login = ({ setLogueado }: LoginProps) => {
         if (nombreUsuario === usuario.usuario && contraseña === usuario.contraseña) {
             setLogueado(true);
             navigate("/productos");
-            
+
         } else {
             alert('Usuario o contraseña incorrectos');
         }
     };
+
+
+    const handleVolver = () => {
+        navigate("/productos")
+    };
+
+
 
     return (
         <div className="login-container">
@@ -41,6 +48,8 @@ const Login = ({ setLogueado }: LoginProps) => {
             />
             <br />
             <button onClick={handleLogin}>Ingresar</button>
+            <br />
+            <button className='btn-volver' onClick={handleVolver}>Volver</button>
         </div>
     );
 };
