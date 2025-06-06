@@ -1,15 +1,31 @@
-// src/pages/DetalleProducto.tsx
 import { useParams, useNavigate } from "react-router-dom"
+import { useEffect, useState } from "react"
+import { doc, getDoc } from "firebase/firestore"
+import database from "../../config/firebase"
 import Especificaciones from "../Especificaciones/Especificaciones"
-import productos from "../../../public/productos.json" 
 
 const Detalle = () => {
   const { id } = useParams()
   const navigate = useNavigate()
+  const [producto, setProducto] = useState<any>(null)
+  const [cargando, setCargando] = useState(true)
 
-  // Buscar producto por ID (esto requiere que cada producto tenga un campo `id`)
-  const producto = productos.find(p => p.idProducto === Number(id))
+  useEffect(() => {
+    const fetchProducto = async () => {
+      if (!id) return
+      const docRef = doc(database, "productos", id)
+      const docSnap = await getDoc(docRef)
+      if (docSnap.exists()) {
+        setProducto({ idProducto: docSnap.id, ...docSnap.data() })
+      } else {
+        setProducto(null)
+      }
+      setCargando(false)
+    }
+    fetchProducto()
+  }, [id])
 
+  if (cargando) return <p>Cargando...</p>
   if (!producto) return <p>Producto no encontrado</p>
 
   return (
